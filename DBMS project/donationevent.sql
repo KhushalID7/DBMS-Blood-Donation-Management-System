@@ -1,0 +1,7 @@
+CREATE TABLE DonationEvent (
+    EventID INT AUTO_INCREMENT PRIMARY KEY,
+    EventName VARCHAR(255) NOT NULL,
+    Location VARCHAR(255) NOT NULL,
+    EventDate DATE NOT NULL,
+    Organizer VARCHAR(255) NOT NULL
+);
