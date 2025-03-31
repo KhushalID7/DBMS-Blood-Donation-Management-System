@@ -8,3 +8,8 @@ CREATE TABLE Blood (
     Status ENUM('Available', 'Used', 'Expired') NOT NULL DEFAULT 'Available',
     FOREIGN KEY (DonorID) REFERENCES Donor(DonorID) ON DELETE CASCADE
 );
+
+
+ALTER TABLE Blood 
+ADD COLUMN StorageUnit VARCHAR(50) DEFAULT NULL,
+ADD COLUMN Barcode VARCHAR(20) UNIQUE NOT NULL;
