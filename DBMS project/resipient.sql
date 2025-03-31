@@ -7,3 +7,9 @@ CREATE TABLE Recipient (
     ContactNumber VARCHAR(15) UNIQUE NOT NULL,
     DoctorApproval ENUM('Yes', 'No') NOT NULL
 );
+
+
+ALTER TABLE Recipient 
+ADD COLUMN EmergencyStatus ENUM('Yes', 'No') DEFAULT 'No',
+ADD COLUMN HospitalName VARCHAR(255) DEFAULT NULL,
+ADD COLUMN DoctorContact VARCHAR(15) DEFAULT NULL;
