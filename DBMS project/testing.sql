@@ -6,3 +6,8 @@ CREATE TABLE Testing (
     Result ENUM('Positive', 'Negative') NOT NULL,
     FOREIGN KEY (BloodID) REFERENCES Blood(BloodID) ON DELETE CASCADE
 );
+
+
+ALTER TABLE Testing 
+ADD COLUMN PerformedBy INT DEFAULT NULL,
+ADD FOREIGN KEY (PerformedBy) REFERENCES Staff(StaffID) ON DELETE SET NULL;
