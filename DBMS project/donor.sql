@@ -8,3 +8,10 @@ CREATE TABLE Donor (
     Address TEXT NOT NULL,
     HealthCheckStatus ENUM('Passed', 'Failed') NOT NULL
 );
+
+
+ALTER TABLE Donor 
+ADD COLUMN LastDonationDate DATE DEFAULT NULL,
+ADD COLUMN EligibilityStatus ENUM('Eligible', 'Not Eligible') DEFAULT 'Eligible',
+ADD COLUMN BloodPressure VARCHAR(20) DEFAULT NULL,
+ADD COLUMN HemoglobinLevel DECIMAL(5,2) DEFAULT NULL;
